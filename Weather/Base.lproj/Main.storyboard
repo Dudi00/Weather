@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yag-y6-pqP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="MmL-Hc-e9I">
+            <objects>
+                <viewController id="yag-y6-pqP" customClass="WeatherViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ccd-6I-OUW"/>
+                        <viewControllerLayoutGuide type="bottom" id="6lm-sW-6UW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vOY-74-PtV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qgG-rI-aPd">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m3c-lp-73L">
+                                    <size key="itemSize" width="176" height="171"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="forecastCell" id="XEb-X3-3EX" customClass="ForecastViewCell" customModule="Weather" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="171"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="171"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVD-oL-meB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8K-td-zGq">
+                                        <rect key="frame" x="8" y="32" width="584" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="A8K-td-zGq" secondAttribute="trailing" constant="8" id="0fo-Fv-9kM"/>
+                                    <constraint firstItem="A8K-td-zGq" firstAttribute="top" secondItem="zVD-oL-meB" secondAttribute="top" constant="32" id="4hy-SR-Dfi"/>
+                                    <constraint firstAttribute="bottom" secondItem="A8K-td-zGq" secondAttribute="bottom" constant="14" id="5VG-Ox-dcg"/>
+                                    <constraint firstAttribute="height" constant="64" id="OTe-Fb-P64"/>
+                                    <constraint firstItem="A8K-td-zGq" firstAttribute="leading" secondItem="zVD-oL-meB" secondAttribute="leading" constant="8" id="nwY-rP-BJP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zVD-oL-meB" firstAttribute="top" secondItem="Ccd-6I-OUW" secondAttribute="bottom" constant="-20" id="1ND-v1-SjS"/>
+                            <constraint firstItem="qgG-rI-aPd" firstAttribute="leading" secondItem="vOY-74-PtV" secondAttribute="leadingMargin" constant="-20" id="4Hq-zq-340"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zVD-oL-meB" secondAttribute="trailing" constant="-20" id="737-zX-5Ux"/>
+                            <constraint firstItem="zVD-oL-meB" firstAttribute="leading" secondItem="vOY-74-PtV" secondAttribute="leadingMargin" constant="-20" id="DW6-K6-e2Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qgG-rI-aPd" secondAttribute="trailing" constant="-20" id="WEM-3v-Xg8"/>
+                            <constraint firstItem="6lm-sW-6UW" firstAttribute="top" secondItem="qgG-rI-aPd" secondAttribute="bottom" id="h6s-qu-lV5"/>
+                            <constraint firstItem="qgG-rI-aPd" firstAttribute="top" secondItem="zVD-oL-meB" secondAttribute="bottom" id="ix8-2M-39i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="qgG-rI-aPd" id="g5C-xi-6KN"/>
+                        <outlet property="headView" destination="zVD-oL-meB" id="tWn-mA-Jvp"/>
+                        <outlet property="titleLabel" destination="A8K-td-zGq" id="xau-Su-qzD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="meR-Ih-7NQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179" y="332"/>
+        </scene>
+    </scenes>
+</document>
